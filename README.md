@@ -24,6 +24,8 @@ VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file f
    6. SelectiveSearchData - This folder is used to store the selective search results of original images.
    7. Program - This folder is used to store all program files, and you can see the [Program List](#Program List) for more details.
    
+**Note** The Database only contains JPEGImages/, Annotations/, ImageSet/ and SelectiveSearchData/.
+
 ### Requirements
    1. Matlab 2014a or higher version
    2. g++ (optional for part of programs)
@@ -31,4 +33,8 @@ VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file f
    4. gtk-config (optional for part of programs)
 
 ### Program List
-   1. 
+   1. preproc.cpp - used to convert the original video into the dividual video frames which are saved in _cache/.
+   2. preproc.m - used to pre-process the video frames into the original images saved in JPEGImages/ such as cut, resize.
+   3. demo.m - used to make annotations for original images, generating the .xml files, GT images and Segmentation images.
+   4. makelist.m - aim to make a train image list which is saved in ImageSet/Main/.
+   5. demo_proposals - used to make proposals for original images which will saved in SelectiveSearchData/.
