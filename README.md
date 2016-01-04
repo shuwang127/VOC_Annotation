@@ -10,19 +10,19 @@ This program is designed and written by 5HU W@N9 in Dec 2015.
 VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file for details).
 
 ### Contents
-1. [File Structure](#file structure)
+1. [File Structure](#file_structure)
 2. [Requirements](#requirements)
 3. [Program List](#program_list)
 4. [Usage](#usage)
 
-### File Structure
+### File_Structure
    1. JPEGImages - This folder is used to store the original images which are saved as JPEG format.
    2. Annotations - This folder is used to store the annotation files of original images which are saved as .xml format.
    3. GTImages - This folder is used to store the ground truth images that make the annotation files visiable.
    4. ImageSet - This folder is used to store the image list file specifying which images are used in the training process.
    5. Segmentation - This folder is used to store the segmentation images which are segmented from the original images.
    6. SelectiveSearchData - This folder is used to store the selective search results of original images.
-   7. Program - This folder is used to store all program files, and you can see the [Program List](#Program_List) for more details.
+   7. Program - This folder is used to store all program files, and you can see the [Program List](#program_list) for more details.
    
 **Note** The Database only contains *JPEGImages/*, *Annotations/*, *ImageSet/* and *SelectiveSearchData/*.
 
@@ -68,10 +68,24 @@ VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file f
    
    3. demo.m
    
-   This part of illustration is written in Program/README.txt which is written by Chinese language.
+   This part of illustration is written in [*Program/README.txt*](#Program/README.txt) which is written by Chinese language.
    
    You can check this file and see what you should do in details.
 
    4. makelist.m
    
+   Open Matlab R2014a and run this file.
+   ``` Shell
+   $ matlab -nodesktop -nosplash
+   >> makelist
+   ```
+   And you can see the imagelist.txt in *ImageSet/Main/*.
+
    5. demo_proposals.m
+   
+   Open Matlab R2014a and run this file.
+   ``` Shell
+   $ matlab -nodesktop -nosplash
+   >> demo_proposals
+   ```
+   And you can see the car_2015_train.mat in *SelectiveSearchData/*.
