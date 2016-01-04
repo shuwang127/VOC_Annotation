@@ -68,7 +68,7 @@ VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file f
    
    3. demo.m
    
-   This part of illustration is written in [*Program/README.txt*](#Program/README.txt) which is written by Chinese language.
+   This part of illustration is written in *Program/README.txt* which is written by Chinese language.
    
    You can check this file and see what you should do in details.
 
