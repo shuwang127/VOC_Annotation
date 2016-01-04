@@ -10,19 +10,19 @@ This program is designed and written by 5HU W@N9 in Dec 2015.
 VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file for details).
 
 ### Contents
-1. [File Structure](#File Structure)
+1. [File Structure](#File_Structure)
 2. [Requirements](#requirements)
-3. [Program List](#Program List)
+3. [Program List](#Program_List)
 4. [Usage](#Usage)
 
-### File Structure
+### File_Structure
    1. JPEGImages - This folder is used to store the original images which are saved as JPEG format.
    2. Annotations - This folder is used to store the annotation files of original images which are saved as .xml format.
    3. GTImages - This folder is used to store the ground truth images that make the annotation files visiable.
    4. ImageSet - This folder is used to store the image list file specifying which images are used in the training process.
    5. Segmentation - This folder is used to store the segmentation images which are segmented from the original images.
    6. SelectiveSearchData - This folder is used to store the selective search results of original images.
-   7. Program - This folder is used to store all program files, and you can see the [Program List](#Program List) for more details.
+   7. Program - This folder is used to store all program files, and you can see the [Program List](#Program_List) for more details.
    
 **Note** The Database only contains *JPEGImages/*, *Annotations/*, *ImageSet/* and *SelectiveSearchData/*.
 
@@ -32,7 +32,7 @@ VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file f
    3. OpenCV 3.0+ (optional for part of programs)
    4. gtk-config (optional for part of programs)
 
-### Program List
+### Program_List
    1. preproc.cpp - used to convert the original video into the dividual video frames which are saved in *_cache/*.
    2. preproc.m - used to pre-process the video frames into the original images saved in *JPEGImages/* such as cut, resize.
    3. demo.m - used to make annotations for original images, generating the .xml files, GT images and Segmentation images.
