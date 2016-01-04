@@ -19,4 +19,7 @@ VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file f
    1. JPEGImages - This folder is used to store the original images which are saved as JPEG format.
    2. Annotations - This folder is used to store the annotation files of original images which are saved as .xml format.
    3. GTImages - This folder is used to store the ground truth images that make the annotation files visiable.
-   4. ImageSet - This folder is used to store the image list file specifying which images used in the training process.
+   4. ImageSet - This folder is used to store the image list file specifying which images are used in the training process.
+   5. Segmentation - This folder is used to store the segmentation images which are segmented from the original images.
+   6. SelectiveSearchData - This folder is used to store the selective search results of original images.
+   7. Program - This folder is used to store all program files, and you can see the [Program List](#Program List) for more details.
