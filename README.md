@@ -23,3 +23,12 @@ VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file f
    5. Segmentation - This folder is used to store the segmentation images which are segmented from the original images.
    6. SelectiveSearchData - This folder is used to store the selective search results of original images.
    7. Program - This folder is used to store all program files, and you can see the [Program List](#Program List) for more details.
+   
+### Requirements
+   1. Matlab 2014a or higher version
+   2. g++ (optional for part of programs)
+   3. OpenCV 3.0+ (optional for part of programs)
+   4. gtk-config (optional for part of programs)
+
+### Program List
+   1. 
