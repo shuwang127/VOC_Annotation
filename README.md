@@ -27,7 +27,7 @@ VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file f
 **Note** The Database only contains *JPEGImages/*, *Annotations/*, *ImageSet/* and *SelectiveSearchData/*.
 
 ### Requirements
-   1. Matlab 2014a or higher version
+   1. Matlab R2014a or higher version
    2. g++ (optional for part of programs)
    3. OpenCV 3.0+ (optional for part of programs)
    4. gtk-config (optional for part of programs)
@@ -37,7 +37,7 @@ VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file f
    2. preproc.m - used to pre-process the video frames into the original images saved in *JPEGImages/* such as cut, resize.
    3. demo.m - used to make annotations for original images, generating the .xml files, GT images and Segmentation images.
    4. makelist.m - aim to make a train image list which is saved in *ImageSet/Main/*.
-   5. demo_proposals - used to make proposals for original images which will saved in *SelectiveSearchData/*.
+   5. demo_proposals.m - used to make proposals for original images which will saved in *SelectiveSearchData/*.
 
 ### Usage
    1. preproc.cpp
@@ -48,4 +48,30 @@ VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file f
    $ ./compile.sh 
    ```
    This command will make the folder *_cache/* and generate the executable file *preproc*.
-   2. pre
+   
+   Execute the preproc program to convert the video into dividual video frames
+   ``` Shell
+   $ ./preproc PATH_TO_THE_VIDEO
+   ```
+   
+   2. preproc.m
+   
+   Open Matlab R2014a and run this file.
+   ``` Shell
+   $ matlab -nodesktop -nosplash
+   >> preproc
+   ```
+   Once you finish running this program, you can delete the _cache folder safely.
+   ``` Shell
+   $ rm -r _cache
+   ```
+   
+   3. demo.m
+   
+   This part of illustration is written in Program/README.txt which is written by Chinese language.
+   
+   You can check this file and see what you should do in details.
+
+   4. makelist.m
+   
+   5. demo_proposals.m
