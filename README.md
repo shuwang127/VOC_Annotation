@@ -16,4 +16,7 @@ VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file f
 4. [Usage](#Usage)
 
 ### File Structure
-   1.JPEGImages
+   1. JPEGImages - This folder is used to store the original images which are saved as JPEG format.
+   2. Annotations - This folder is used to store the annotation files of original images which are saved as .xml format.
+   3. GTImages - This folder is used to store the ground truth images that make the annotation files visiable.
+   4. ImageSet - This folder is used to store the image list file specifying which images used in the training process.
