@@ -10,12 +10,12 @@ This program is designed and written by 5HU W@N9 in Dec 2015.
 VOC_Annotation is released under the GPL v2 License (refer to the LICENSE file for details).
 
 ### Contents
-1. [File Structure](#File_Structure)
+1. [File Structure](#file structure)
 2. [Requirements](#requirements)
-3. [Program List](#Program_List)
-4. [Usage](#Usage)
+3. [Program List](#program_list)
+4. [Usage](#usage)
 
-### File_Structure
+### File Structure
    1. JPEGImages - This folder is used to store the original images which are saved as JPEG format.
    2. Annotations - This folder is used to store the annotation files of original images which are saved as .xml format.
    3. GTImages - This folder is used to store the ground truth images that make the annotation files visiable.
