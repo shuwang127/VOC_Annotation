@@ -1,0 +1,76 @@
+<annotation>
+	<folder>CAR2015</folder>
+	<filename>000001.jpg</filename>
+	<source>
+		<database>The CAR2015 Database</database>
+		<annotation>NUPT CAR2015</annotation>
+		<image>xtnet</image>
+		<xtnetid>000001</xtnetid>
+	</source>
+	<owner>
+		<name>Shu Wang</name>
+		<nickname>Timely Rain</nickname>
+	</owner>
+	<size>
+		<width>600</width>
+		<height>338</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>car</name>
+		<color>Unspecified</color>
+		<logo>Unspecified</logo>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>111</xmin>
+			<ymin>177</ymin>
+			<xmax>242</xmax>
+			<ymax>301</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car</name>
+		<color>Unspecified</color>
+		<logo>Unspecified</logo>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>223</xmin>
+			<ymin>97</ymin>
+			<xmax>319</xmax>
+			<ymax>182</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car</name>
+		<color>Unspecified</color>
+		<logo>Unspecified</logo>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>290</xmin>
+			<ymin>65</ymin>
+			<xmax>371</xmax>
+			<ymax>138</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car</name>
+		<color>Unspecified</color>
+		<logo>Unspecified</logo>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>368</xmin>
+			<ymin>50</ymin>
+			<xmax>445</xmax>
+			<ymax>114</ymax>
+		</bndbox>
+	</object>
+</annotation>

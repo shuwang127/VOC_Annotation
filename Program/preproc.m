@@ -25,9 +25,9 @@ for i = 1:length(files)
     img = imread(files(i).name);
     
     %% cut
-    x1 = 165;   x2 = 1755;
-    y1 = 1;     y2 = 1075;
-    img = img(y1:y2,x1:x2,:);
+    %x1 = 165;   x2 = 1755;
+    %y1 = 1;     y2 = 1075;
+    %img = img(y1:y2,x1:x2,:);
     
     %% resize
     [ysize,xsize,~] = size(img);
