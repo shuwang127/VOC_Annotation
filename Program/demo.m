@@ -14,6 +14,7 @@ FBO.source = init_source(FBO.input_path);
 %%
 start = 1;
 for i = start:size(FBO.source.idx,2)
+    disp('**************************************************************');
     BBox = get_bbox(FBO.source, i);
     xml_file = write_anno( BBox, FBO, i);
     save_file = save_output( BBox, FBO, i);
