@@ -18,6 +18,7 @@ disp(['There are totally ', num2str(length(files)), ' images..']);
 
 %%
 NUMSTART = 000001;
+randomnum = randperm( length(files) );
 
 for i = 1:length(files)
 
@@ -36,7 +37,7 @@ for i = 1:length(files)
     img = imresize(img,[y x],'bicubic');
     
     %% write
-    savepath = [output_path, num2str(NUMSTART+i-1,'%06d'), '.jpg'];
+    savepath = [output_path, num2str(NUMSTART+randomnum(i)-1,'%06d'), '.jpg'];
     imwrite(img,savepath);
     
 end
