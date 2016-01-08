@@ -12,7 +12,9 @@ FBO.seg_path = '../Segmentation/';
 FBO.source = init_source(FBO.input_path);
 
 %%
-start = 1;
+start = 1;  % only need to modified
+
+%% Make Annotation
 for i = start:size(FBO.source.idx,2)
     disp('**************************************************************');
     BBox = get_bbox(FBO.source, i);
