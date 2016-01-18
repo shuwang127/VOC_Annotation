@@ -69,6 +69,6 @@ for i = istart:images_num
 
     boxes{i} = bbox;
     images{i,1} = source.files(i).name(end-9:end-4);
-    
+
     save(save_path, 'boxes', 'images');
 end
