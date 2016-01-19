@@ -1,6 +1,7 @@
 %% clear all
 clear all;
 close all;
+clc;
 
 %% compile the basic code
 addpath('_Make_Proposals');
@@ -25,34 +26,35 @@ numHierarchy = length(colorTypes) * length(kThresholds);
 input_path = '../JPEGImages/';
 source = init_source(input_path);
 images_num = size(source.files,1);
-save_path = '../SelectiveSearchData/car_2015_train.mat';
+save_path = '../SelectiveSearchData/';
+% save_path = '../SelectiveSearchData/car_2015_train.mat';
 
 %%
-if(~exist(save_path))
-    boxes = [];
-    images = [];
-    istart = 1;
-else
-    load(save_path);
-    istart = length(images) + 1;
-    if (length(images) == images_num)
-        fprintf('Finish the process\n');
-        break;
-    end
-end
+% if(~exist(save_path))
+%     boxes = [];
+%     images = [];
+%     istart = 1;
+% else
+%     load(save_path);
+%     istart = length(images) + 1;
+%     if (length(images) == images_num)
+%         fprintf('Finish the process\n');
+%         break;
+%     end
+% end
+
+mat_file = dir(save_path);
+mat_num = size(mat_file,1)-2;
 
 % For each image do Selective Search
 fprintf('Performing selective search: \n');
 
 % boxes = cell(1, length(images));
-for i = istart:images_num
+for i = (mat_num+1):images_num
     bbox = [];
-    if mod(i,10) == 0
-        fprintf('%04d\n', i);
-    end
     idx = 1;
     currBox = cell(1, numHierarchy);
-    im_path = source.files(i).name;
+    im_path = source.files(i).name
     im = imread(im_path);
     for k = kThresholds % [100 200]
         minSize = k; % We use minSize = k.
@@ -65,10 +67,12 @@ for i = istart:images_num
     
     bbox = cat(1, currBox{:});
     bbox = unique(bbox, 'rows');
-    % bbox = bbox(:,[2,1,4,3])-1;
+    boxes = bbox(:,[2,1,4,3])-1;
 
-    boxes{i} = bbox;
-    images{i,1} = source.files(i).name(end-9:end-4);
-
-    save(save_path, 'boxes', 'images');
+    % boxes{i} = bbox;
+    % images{i,1} = source.files(i).name(end-9:end-4);
+    
+    % save(save_path, 'boxes', 'images');
+    savemat_path = strcat(save_path, num2str(i,'%06d'));
+    save(strcat(savemat_path, '_boxes'), 'boxes');
 end
