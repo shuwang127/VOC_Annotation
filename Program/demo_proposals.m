@@ -76,3 +76,34 @@ for i = (mat_num+1):images_num
     savemat_path = strcat(save_path, num2str(i,'%06d'));
     save(strcat(savemat_path, '_boxes'), 'boxes');
 end
+
+%%
+num_train = 10000;
+save_train_path = '../SelectiveSearchData/car_2015_train.mat';
+fprintf('Performing training selective search data: \n');
+for i = 1:num_train
+    savemat_path = strcat(save_path, num2str(i,'%06d'));
+    load(strcat(savemat_path, '_boxes'), 'boxes');
+    boxes = boxes(:,[2,1,4,3])+1;
+    boxes_cell{i} = boxes;
+    images{i,1} = savemat_path(end-5:end);
+end
+clear boxes;
+boxes = boxes_cell;
+save(save_train_path, 'boxes', 'images');
+
+%%
+clear boxes boxes_cell images;
+save_test_path = '../SelectiveSearchData/car_2015_test.mat';
+fprintf('Performing testing selective search data: \n');
+for i = num_train+1:images_num
+    savemat_path = strcat(save_path, num2str(i,'%06d'));
+    load(strcat(savemat_path, '_boxes'), 'boxes');
+    boxes = boxes(:,[2,1,4,3])+1;
+    boxes_cell{i-num_train} = boxes;
+    images{i-num_train,1} = savemat_path(end-5:end);
+end
+clear boxes;
+boxes = boxes_cell;
+save(save_test_path, 'boxes', 'images');
+fprintf('done! \n');
